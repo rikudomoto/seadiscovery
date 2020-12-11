@@ -1,0 +1,32 @@
+<div class="roguinn">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+ <div class="navbar-brand js-scroll-trigger" ><%= link_to 'Sea Discovery', root_path %></div>
+ </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+              <div class='login-flash-message'>
+              <%= flash[:notice] %>
+              <%= flash[:alert] %>
+              </div>
+            <h5 class="card-title text-center">Login</h5>
+            <%= form_with model: @user, url: user_session_path, method: :post, class: "form-signin", local: true do |f| %>
+              <div class="form-label-group">
+                <%= f.email_field :email, id:"inputEmail", class:"form-control", placeholder:"Email", required: true %>
+                <label for="inputEmail">Email address</label>
+              </div>
+              <div class="form-label-group">
+                <%= f.password_field :password, id:"inputPassword", class:"form-control", placeholder:"Password", required: true %>
+                <label for="inputPassword">Password</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <hr class="my-4">
+             <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

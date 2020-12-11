@@ -1,0 +1,76 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('Botanical Spring Time Header.jpg' , size: '350x100'), "/" %>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">海の情報を入力</h2>
+    <%= form_with(model: @sea, url:home_path, method: :patch,local: true) do |f| %>
+
+    <%#= render 'shared/error_messages', model: f.object %>
+    
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        おすすめ写真！！
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        海の名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :seaname, class:"items-text", id:"item-name", placeholder:"(例)片瀬東浜海水浴場", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          海の情報
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :explanation, class:"items-text", id:"item-info", placeholder:"海の特徴(海が綺麗で、砂浜もビーチ感があり夏にはぴったりの海水浴場です。近辺にはサーフィンスクール、SUPなどサマースポーツが楽しめます！ぜひ一度お越しください)" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+       <div class = "addresu">
+        <div class = "weight-bold-text">
+         場所   
+         <span class ="indispensable">必須</span><%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+         </div>
+          <%= f.text_area :address, class:"items-text", id:"item-name", placeholder:"詳細", maxlength:"40" %>
+        </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">周辺詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          駐車場
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:car_id, Car.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          シャワー室完備の有無
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:shower_id, Shower.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する", class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>

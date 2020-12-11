@@ -1,0 +1,13 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: ネーム
+     sea:
+       seaname: 海の名前
+       image: 画像
+       explanation: 海の情報
+       address: 住所
+       car_id: 駐車場
+       shower_id: シャワー室完備の有無
+       area_id: 都道府県

@@ -1,0 +1,57 @@
+<header class="top-page-header>">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+   <div class="container">
+       <a class="navbar-brand js-scroll-trigger" href="/">Sea Discovery</a>
+          <div class="dis">
+    <% if user_signed_in? && current_user.id == @sea.user_id %>
+    <%= link_to '編集', edit_home_path(@sea.id), method: :get, class: "item-red-btn" %>
+    <%= link_to '削除', home_path(@sea.id), method: :delete, class:'item-destroy' %>
+    <% end %>
+    </div>
+   </div>
+</nav>
+</header>
+
+
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @sea.seaname %>
+    </h2>
+    <div class='item-img-content'>
+      <%= image_tag @sea.image, class:"item-box-img" %>
+    </div>
+    <div class="item-price-box">
+      <span class="item-explnation">
+        <%= @sea.area.name %>
+      </span>
+      <span class="item-postage">
+        <%= @sea.address %>
+      </span>
+    </div>
+
+    
+
+
+    <div class="item-explain-box">
+      <span><%= @sea.explanation %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @sea.user.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">駐車場</th>
+          <td class="detail-value"><%= @sea.car.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">シャワー完備</th>
+          <td class="detail-value"><%= @sea.shower.name %></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+</div>

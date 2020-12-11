@@ -1,0 +1,26 @@
+#japan-map {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
+  background-color: white;
+}
+
+.pref {
+  background: #1fc6e4dc;
+  min-height: 10px;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.pref a {
+  display: block;
+  min-height: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+#hokkaido {
+  margin: 20px 0;
+}
