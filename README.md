@@ -17,8 +17,8 @@
 
 ```投稿詳細```
 
-[![Image from Gyazo](https://i.gyazo.com/5d26f051a83d7e825e4cac7493372231.jpg)](https://gyazo.com/5d26f051a83d7e825e4cac7493372231)
-[![Image from Gyazo](https://i.gyazo.com/8cb65fb354c2a4019f987c9e5563196f.jpg)](https://gyazo.com/8cb65fb354c2a4019f987c9e5563196f)
+[![Image from Gyazo](https://i.gyazo.com/6d5f26ac23b790612de37a88f7afd956.jpg)](https://gyazo.com/6d5f26ac23b790612de37a88f7afd956)
+[![Image from Gyazo](https://i.gyazo.com/a825420ac6667c1018cbc3bf8b279c77.jpg)](https://gyazo.com/a825420ac6667c1018cbc3bf8b279c77)
 
 ```ログインページ```
 
