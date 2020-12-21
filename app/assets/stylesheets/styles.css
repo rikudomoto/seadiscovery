@@ -2616,29 +2616,29 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #212529;
-  background-color: #f8f9fa;
+  color: #288ff7;
+  background-color: #2f8deb;
   border-color: #f8f9fa;
 }
 .btn-light:hover {
   color: #212529;
-  background-color: #e2e6ea;
+  background-color: #2675c5;
   border-color: #dae0e5;
 }
 .btn-light:focus, .btn-light.focus {
   color: #212529;
-  background-color: #e2e6ea;
+  background-color: #2e7dcc;
   border-color: #dae0e5;
   box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 .btn-light.disabled, .btn-light:disabled {
   color: #212529;
-  background-color: #f8f9fa;
+  background-color: #3b8de0;
   border-color: #f8f9fa;
 }
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show > .btn-light.dropdown-toggle {
   color: #212529;
-  background-color: #dae0e5;
+  background-color: #2f95e9;
   border-color: #d3d9df;
 }
 .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus, .show > .btn-light.dropdown-toggle:focus {
@@ -9985,6 +9985,7 @@ p {
 }
 
 .page-section {
+  background-color: #fed136;
   padding: 6rem 0;
 }
 .page-section h2.section-heading {
